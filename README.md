@@ -7,7 +7,7 @@ Até o momento, a biblioteca funciona a partir de uma lista de dicionários, sen
 ## Funções
  O algoritmo conta com as seguintes funções até o monento
 #### cadastraLivros
-Função responsável pelo cadastro de um novo livro. Recebe um dicionário 'livro' e uma lista 'biblioteca' para preencher os dados do dicionário e adiciona-lo à lista.
+Função responsável pelo cadastro de um novo livro. Recebe a lista 'biblioteca', cria um dicionário 'livro' e solicita ao usuário preencher os dados do livro e adiciona-lo à lista.
 
 #### listarLivros
 Função responsável apenas por listar os livros. Recebe uma lista de livros e mostra no terminal da seguinte maneira:
