@@ -28,4 +28,24 @@ def buscaLivro(nomeLivro, biblioteca):
             retornaLivros.append(livro)
         return retornaLivros
         
+#A função removelivro recebe um livro e uma lista. Remove o livro recebido da biblioteca, caso o item seja removido retorna Tru, se não, retorna False
 
+def removelivro(nomeLivro,biblioteca):
+    
+    for livro in biblioteca:
+        
+        if nomeLivro.lower().replace(' ', '') == livro['nome'].lower().replace(' ', ''):
+            print('------------------------------')
+            print(f'    Nome: {livro["nome"]}')
+            print(f'    Autor: {livro["autor"]}')
+            print(f'    Ano: {livro["ano"]}')
+            print('------------------------------')
+            confirma = input('\nDeseja exluir esse livro da biblioteca? [S]SIM [N]NÃO\n').capitalize().startswith('S')
+            if confirma is True:
+                biblioteca.remove(livro)
+                return True
+            else:
+                return False
+        else:
+            print('O livro informado não foi encontrado ou já foi removido!\n')
+            return False
