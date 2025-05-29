@@ -20,4 +20,4 @@ Função responsável apenas por listar os livros. Recebe uma lista de livros e 
 
 #### buscaLivro
 
-A função buscaLivro recebe o nome de um livro e retorna uma lista de livros com o mesmo nome.
+A função buscaLivro recebe o nome de um livro e uma biblioteca. Retorna uma lista de livros com o mesmo nome, caso o livro desejado não esteja na biblioteca, ele retorna uma lista vazia.
