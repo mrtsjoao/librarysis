@@ -1,4 +1,8 @@
+import os
 
+def limparTela():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    
 #Função cadastraLivro apenas solicita os dados do livro ao usuário
 def cadastraLivros(biblioteca):
     livro= {
@@ -26,11 +30,12 @@ def buscaLivro(nomeLivro, biblioteca):
     for livro in biblioteca:
         if nomeLivro.lower().replace(' ', '') == livro['nome'].lower().replace(' ',''):
             retornaLivros.append(livro)
-        return retornaLivros
+            
+    return retornaLivros
         
 #A função removelivro recebe um livro e uma lista. Remove o livro recebido da biblioteca, caso o item seja removido retorna Tru, se não, retorna False
 
-def removelivro(nomeLivro,biblioteca):
+def removerlivro(nomeLivro,biblioteca):
     
     for livro in biblioteca:
         
@@ -46,6 +51,6 @@ def removelivro(nomeLivro,biblioteca):
                 return True
             else:
                 return False
-        else:
-            print('O livro informado não foi encontrado ou já foi removido!\n')
-            return False
+        
+        print('O livro informado não foi encontrado ou já foi removido!\n')
+        return False
